@@ -33,4 +33,7 @@ private:
     
     string buttonState;
     string potValue;
+    
+    ofSoundPlayer beat1;
+    ofSoundPlayer beat2;
 };

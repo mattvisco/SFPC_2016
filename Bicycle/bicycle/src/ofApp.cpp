@@ -12,6 +12,9 @@ void ofApp::setup(){
     // call setupArduino()
     ofAddListener(ard.EInitialized, this, &ofApp::setupArduino);
     bSetupArduino	= false;	// flag so we setup arduino when its ready, you don't need to touch this :)
+    
+    beat1.load("beat1.aif");
+    beat2.load("beat2.aif");
 }
 
 //--------------------------------------------------------------
@@ -19,44 +22,9 @@ void ofApp::update(){
     updateArduino();
 }
 
-//switch (key) {
-//    case OF_KEY_RIGHT:
-//        // rotate servo head to 180 degrees
-//        ard.sendServo(9, 180, false);
-//        ard.sendDigital(18, ARD_HIGH);  // pin 20 if using StandardFirmata from Arduino 0022 or older
-//        break;
-//    case OF_KEY_LEFT:
-//        // rotate servo head to 0 degrees
-//        ard.sendServo(9, 0, false);
-//        ard.sendDigital(18, ARD_LOW);  // pin 20 if using StandardFirmata from Arduino 0022 or older
-//        break;
-//    default:
-//        break;
-//}
-
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-//    bgImage.draw(0,0);
-//    
-//    ofEnableAlphaBlending();
-//    ofSetColor(0, 0, 0, 127);
-//    ofDrawRectangle(510, 15, 275, 150);
-//    ofDisableAlphaBlending();
-//    
-//    ofSetColor(255, 255, 255);
-//    if (!bSetupArduino){
-//        font.drawString("arduino not ready...\n", 515, 40);
-//    } else {
-//        font.drawString(potValue + "\n" + buttonState +
-//                        "\nsending pwm: " + ofToString((int)(128 + 128 * sin(ofGetElapsedTimef()))), 515, 40);
-//        
-//        ofSetColor(64, 64, 64);
-//        smallFont.drawString("If a servo is attached, use the left arrow key to rotate "
-//                             "\ncounterclockwise and the right arrow key to rotate clockwise.", 200, 550);
-//        ofSetColor(255, 255, 255);
-//        
-//    }
 }
 
 //--------------------------------------------------------------
@@ -118,8 +86,10 @@ void ofApp::digitalPinChanged(const int & pinNum) {
     else state = ARD_LOW;
     if(pinNum == 4) {
         ard.sendDigital(5, state);
+        if(state == ARD_HIGH) beat1.play();
     } else if(pinNum == 6) {
         ard.sendDigital(7, state);
+        if(state == ARD_HIGH) beat2.play();
     }
 }
 

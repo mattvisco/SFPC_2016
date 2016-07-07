@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "ED077B3DEF7501BFEEDC73E3026384A4C740AE17",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "37526DA425E5430474A14FBFA1BC4525160B5FC1" : 0,
+    "ED077B3DEF7501BFEEDC73E3026384A4C740AE17" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1DCD90E2-E9C5-4876-939B-DDC61417D71C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "37526DA425E5430474A14FBFA1BC4525160B5FC1" : "..\/..\/addons\/ofxCv",
+    "ED077B3DEF7501BFEEDC73E3026384A4C740AE17" : "SFPC\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "mouthBlobs",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Random Sketches\/mouthBlobs\/mouthBlobs.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kylemcdonald\/ofxCv.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "37526DA425E5430474A14FBFA1BC4525160B5FC1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mattvisco\/SFPC_2016.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ED077B3DEF7501BFEEDC73E3026384A4C740AE17"
+    }
+  ]
+}
