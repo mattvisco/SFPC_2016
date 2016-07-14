@@ -22,6 +22,19 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		
         ofVideoGrabber grabber;
-    float maxBrightness = 0;
     
+    void drawImageClosestRGB();
+    void drawImageRGBNoRepeat();
+    void drawImageRGBNoRepeat2();
+    void drawImageRGBNoRepeat3();
+    void oldImageDrawingStuff();
+    
+    vector<ofImage> images;
+    vector<ofPoint> colors;
+    vector<int> brightness;
+
+    
+    
+    ofImage img;
+    int incBy;
 };
