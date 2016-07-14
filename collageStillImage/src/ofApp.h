@@ -3,6 +3,21 @@
 #include "ofMain.h"
 #include "ofxDatGui.h"
 
+struct CompareData {
+    int rotate = 0;
+    float colorDist ;
+    float brightnessDiff;
+    float hueDiff;
+    float total;
+};
+struct Tile {
+    ofImage originalImage;
+    ofImage imageResized;
+    ofPoint pos;
+    int displayImgIndex;
+    CompareData data;
+};
+
 class ofApp : public ofBaseApp{
 
 	public:
@@ -21,25 +36,23 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
+    
+    CompareData getCompareData(ofImage image1, ofImage image2);
+    void recalculateTileTotals();
     void setPixels(int inc);
     
     ofImage image;
     vector<ofImage> imageTiles;
-    vector<ofImage> sourceTiles;
-    vector<ofImage> sourceTilesResized;
-    vector<int> sourceTilesIndices;
-    vector<ofPoint> colors;
-    vector<float> brightnesses;
-    vector<float> hues;
+    vector<Tile> sourceTiles;
     
     int incBy;
     int height = 500;
     int width = 500;
     bool mosaic = false;
     
-    float alpha;
-    float beta;
-    float gamma;
+    float alpha = 0.0;
+    float beta = 0.0;
+    float gamma = 0.0;
 		
     ofxDatGui* gui;
     ofxDatGuiSlider* alphaSlider;
