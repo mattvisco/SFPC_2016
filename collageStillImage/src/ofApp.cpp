@@ -75,11 +75,11 @@ void ofApp::setup(){
     
     // Form Image
     image = ofImage();
-    image.load("turrell.jpg");
+    image.load("chicken.jpg");
     image.resize(width, height);
     // Source Image
     ofImage sourceImage = ofImage();
-    sourceImage.load("church.jpg");
+    sourceImage.load("bush.jpg");
     sourceImage.resize(width, height);
     
     // Uncomment if you want to process all at once (uncomment setPixel() below)
